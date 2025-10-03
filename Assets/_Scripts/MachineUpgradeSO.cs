@@ -11,10 +11,6 @@ public class MachineUpgradeSO : ScriptableObject
 	public Sprite onSprite;
 	public Sprite offSprite;
 
-	public Sprite executionIntro;
-	public Sprite executionGood;
-	public Sprite executionBad;
-
 	public bool isActive;
 	public int cost;
 	public int durability;

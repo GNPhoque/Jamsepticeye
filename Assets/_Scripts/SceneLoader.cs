@@ -33,7 +33,7 @@ public class SceneLoader : MonoBehaviour
 	public void StartNewGame()
 	{
 		saveData.Init();
-		LoadScene((int)Scenes.Hub);
+		LoadScene(Scenes.Hub);
 	}
 	
 	public void LoadScene(int scene)

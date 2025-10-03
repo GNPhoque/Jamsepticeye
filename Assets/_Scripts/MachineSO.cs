@@ -12,6 +12,10 @@ public class MachineSO : ScriptableObject
 	public Sprite onSprite;
 	public Sprite offSprite;
 
+	public Sprite executionIntro;
+	public Sprite executionGood;
+	public Sprite executionBad;
+
 	public int baseSuccessChance;
 	public int baseGoldReward;
 	public int baseGloryReward;

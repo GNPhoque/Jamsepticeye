@@ -26,6 +26,9 @@ MonoBehaviour:
   machine: 5
   onSprite: {fileID: 8617044433687267741, guid: 2d19780c4424a864eadccece22e8ec72, type: 3}
   offSprite: {fileID: -3527683056461105708, guid: 8344cae628dd26343ae413062128e78a, type: 3}
+  executionIntro: {fileID: 21300000, guid: be67155a1ca21ab44804f10e9af56a81, type: 3}
+  executionGood: {fileID: 21300000, guid: 43e525100f3b06540a99bf6a176c5e3d, type: 3}
+  executionBad: {fileID: 21300000, guid: 813027378f58fa24f8dad7b925e52f69, type: 3}
   baseSuccessChance: 0
   baseGoldReward: 0
   baseGloryReward: 0

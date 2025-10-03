@@ -18,6 +18,7 @@ MonoBehaviour:
   gloryGained: 0
   gloryTarget: 20
   hype: 0
+  selectedMachine: 1
   upgrades:
   - {fileID: 11400000, guid: d10363c82ad801b4dacb41e14bd70d61, type: 2}
   - {fileID: 11400000, guid: d63d0bf2616b8b94eb9f91e1bb965b07, type: 2}

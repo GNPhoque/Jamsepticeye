@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd67f8865fc24b148b58ae5c62cb92a1, type: 3}
+  m_Name: Quartering
+  m_EditorClassIdentifier: 
+  name: Quartering
+  description: 'Quartering machine
+
+    stats :
+
+    Chance : 50%
+
+    Gold gain
+    : 25
+
+    Glory gain : 3'
+  machine: 7
+  onSprite: {fileID: -8790912584191024604, guid: 8144cb03324f18f479d5ebac0878f2d5, type: 3}
+  offSprite: {fileID: -380544469426185903, guid: 9c3ac24511a15814b99f0e0323a8110f, type: 3}
+  baseSuccessChance: 0
+  baseGoldReward: 0
+  baseGloryReward: 0
+  baseHypeReward: 0
+  upgrades:
+  - {fileID: 11400000, guid: 96eb9d5881ffb4c4d82c11eeb2aa7b9d, type: 2}
+  - {fileID: 11400000, guid: 5ea4a0c187aff1e408d2395198220a30, type: 2}
+  - {fileID: 11400000, guid: 15527c54283f47c41982a9b93ea2b69e, type: 2}

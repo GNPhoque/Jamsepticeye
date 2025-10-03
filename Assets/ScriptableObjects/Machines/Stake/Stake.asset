@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd67f8865fc24b148b58ae5c62cb92a1, type: 3}
+  m_Name: Stake
+  m_EditorClassIdentifier: 
+  name: Stake
+  description: 'Stake machine
+
+    stats :
+
+    Chance : 50%
+
+    Gold gain : 25
+
+    Glory
+    gain : 3'
+  machine: 5
+  onSprite: {fileID: 8617044433687267741, guid: 2d19780c4424a864eadccece22e8ec72, type: 3}
+  offSprite: {fileID: -3527683056461105708, guid: 8344cae628dd26343ae413062128e78a, type: 3}
+  baseSuccessChance: 0
+  baseGoldReward: 0
+  baseGloryReward: 0
+  baseHypeReward: 0
+  upgrades:
+  - {fileID: 11400000, guid: 8baf402f8877d804195828325fc76b0a, type: 2}
+  - {fileID: 11400000, guid: ba37a62c1fe841d44a70940723a72301, type: 2}
+  - {fileID: 11400000, guid: 0ae4de0b617de494e90143bc19ab5de6, type: 2}

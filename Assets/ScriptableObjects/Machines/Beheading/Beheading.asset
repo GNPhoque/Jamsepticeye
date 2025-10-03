@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd67f8865fc24b148b58ae5c62cb92a1, type: 3}
+  m_Name: Beheading
+  m_EditorClassIdentifier: 
+  name: Beheading
+  description: 'Beheading machine
+
+    stats :
+
+    Chance : 50%
+
+    Gold gain :
+    25
+
+    Glory gain : 3'
+  machine: 3
+  onSprite: {fileID: -1121655610266385169, guid: 4b12a57bc1ce56c49a6c7424f0f4f882, type: 3}
+  offSprite: {fileID: 5734550760827045744, guid: 6c97d339073bcfd4a90e11871cbcabae, type: 3}
+  baseSuccessChance: 0
+  baseGoldReward: 0
+  baseGloryReward: 0
+  baseHypeReward: 0
+  upgrades:
+  - {fileID: 11400000, guid: d10363c82ad801b4dacb41e14bd70d61, type: 2}
+  - {fileID: 11400000, guid: d63d0bf2616b8b94eb9f91e1bb965b07, type: 2}
+  - {fileID: 11400000, guid: c220cc66e2de5eb459b098367b14f5de, type: 2}

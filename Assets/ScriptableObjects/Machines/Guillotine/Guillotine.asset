@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd67f8865fc24b148b58ae5c62cb92a1, type: 3}
+  m_Name: Guillotine
+  m_EditorClassIdentifier: 
+  name: Guillotine
+  description: 'Guillotine machine
+
+    stats :
+
+    Chance : 50%
+
+    Gold gain
+    : 25
+
+    Glory gain : 3'
+  machine: 2
+  onSprite: {fileID: -6342330696276671901, guid: 2f81b0a444d8ea341b8e561b99085175, type: 3}
+  offSprite: {fileID: -5554901041445681194, guid: 78d25a99752956c429685f8f042436c9, type: 3}
+  baseSuccessChance: 0
+  baseGoldReward: 0
+  baseGloryReward: 0
+  baseHypeReward: 0
+  upgrades:
+  - {fileID: 11400000, guid: c2a4c20f2583bd04681a5a23f5235c9e, type: 2}
+  - {fileID: 11400000, guid: 93195fa33bab41e44b3f9500aa126679, type: 2}
+  - {fileID: 11400000, guid: 77e38e32d23dd7049a751f1c1cff3158, type: 2}

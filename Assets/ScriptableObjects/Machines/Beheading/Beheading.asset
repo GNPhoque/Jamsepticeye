@@ -13,26 +13,30 @@ MonoBehaviour:
   m_Name: Beheading
   m_EditorClassIdentifier: 
   name: Beheading
-  description: 'Beheading machine
+  description: '<color=#7E0800>Beheading machine</color>
 
-    stats :
-
-    Chance : 50%
-
-    Gold gain :
-    25
-
-    Glory gain : 3'
+    Some description to
+    show how we die on this'
   machine: 3
-  onSprite: {fileID: -1121655610266385169, guid: 4b12a57bc1ce56c49a6c7424f0f4f882, type: 3}
-  offSprite: {fileID: 5734550760827045744, guid: 6c97d339073bcfd4a90e11871cbcabae, type: 3}
-  executionIntro: {fileID: 21300000, guid: be67155a1ca21ab44804f10e9af56a81, type: 3}
-  executionGood: {fileID: 21300000, guid: 43e525100f3b06540a99bf6a176c5e3d, type: 3}
-  executionBad: {fileID: 21300000, guid: 813027378f58fa24f8dad7b925e52f69, type: 3}
-  baseSuccessChance: 0
-  baseGoldReward: 0
-  baseGloryReward: 0
+  roll:
+    perfect: 1
+    ok: 1
+    cross: 1
+  baseRoll:
+    perfect: 1
+    ok: 1
+    cross: 1
+  onSprite: {fileID: 21300000, guid: 4b12a57bc1ce56c49a6c7424f0f4f882, type: 3}
+  offSprite: {fileID: 21300000, guid: 6c97d339073bcfd4a90e11871cbcabae, type: 3}
+  executionIntro: {fileID: 21300000, guid: a155203ffc350474b82ce8c6fbea3e3e, type: 3}
+  executionGood: {fileID: 21300000, guid: f1973ee6767f3ca49bba56e966b08dc4, type: 3}
+  executionBad: {fileID: 21300000, guid: dab9a95510bd1c54f9d319383488e1a0, type: 3}
+  baseGoldReward: 20
+  baseGloryReward: 3
   baseHypeReward: 0
+  goldReward: 0
+  gloryReward: 0
+  hypeReward: 0
   upgrades:
   - {fileID: 11400000, guid: d10363c82ad801b4dacb41e14bd70d61, type: 2}
   - {fileID: 11400000, guid: d63d0bf2616b8b94eb9f91e1bb965b07, type: 2}

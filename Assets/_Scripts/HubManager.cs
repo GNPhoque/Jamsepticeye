@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -17,6 +19,8 @@ public class HubManager : MonoBehaviour
 	private TextMeshProUGUI todayMachineText;
 
 	[SerializeField]
+	private GameObject loreGO;
+	[SerializeField]
 	private GloryFill gloryFill;
 
 	[SerializeField]
@@ -31,9 +35,29 @@ public class HubManager : MonoBehaviour
 	[SerializeField]
 	private TextMeshProUGUI tooltipCostText;
 
+	[SerializeField]
+	private int targetBase;
+	[SerializeField]
+	private int targetDayMult;
+	[SerializeField]
+	private int targetFailCompensation;
+
 	public EMachines todayMachine;
+	private bool _isHovering;
 
 	public static HubManager instance;
+
+	public bool isHovering { 
+		get => _isHovering;
+		set
+		{
+			_isHovering = value;
+			if (!value)
+			{
+				HideTooltip();
+			}
+		}
+	}
 
 	private void Awake()
 	{
@@ -42,6 +66,12 @@ public class HubManager : MonoBehaviour
 
 	private void Start()
 	{
+		if (!saveData.watchLore)
+		{
+			HideLore();
+		}
+		saveData.watchLore = false;
+
 		dayText.text = $"DAY {++saveData.day}";
 
 		//Top Left TODAY display
@@ -55,24 +85,73 @@ public class HubManager : MonoBehaviour
 			machine.Init();
 		}
 
+		//Top Right Show today's machine details
+		machines.First(x => x.data.machine == todayMachine).OnPointerEnter(null);
+
 		//Bottom Left Glory and gold display
+		UpdateGloryTarget();
 		gloryFill.SetGloryOnHubLoaded();
 		gloryFill.UpdateTargetGlory();
 		gloryFill.FillGlory();
 		UpdateGold();
+
+		CheckGameOver();
+		gloryFill.UpdateTargetGlory();
+	}
+
+	public void HideLore()
+	{
+		loreGO.SetActive(false);
+	}
+
+	private void CheckGameOver()
+	{
+		if(saveData.glory >= 100)
+		{
+			//WIN
+			SceneLoader.instance.LoadScene(Scenes.GameOverWin);
+		}
+		else if (saveData.glory < saveData.gloryTarget)
+		{
+			//LOOSE
+			SceneLoader.instance.LoadScene(Scenes.GameOverLoose);
+		}
+	}
+
+	private void UpdateGloryTarget()
+	{
+		if (saveData.day < 3)
+		{
+			return;
+		}
+
+		float target = saveData.gloryTarget;
+		target += targetBase * (1 + target / 100);
+		if (saveData.lastExecFail)
+		{
+			target += targetFailCompensation;
+		}
+
+		saveData.gloryTarget = target;
 	}
 
 	public void UpdateGold()
 	{
-		goldText.text = saveData.gold.ToString();
+		goldText.text = Mathf.Floor(saveData.gold).ToString();
 	}
 
 	public void ShowTooltip(string text, string cost = "")
 	{
+		StartCoroutine(ShowTooltipAfterDelay(text, cost));
+	}
+
+	IEnumerator ShowTooltipAfterDelay(string text, string cost = "")
+	{
+		yield return new WaitForEndOfFrame();
 		HideTooltip();
 		tooltipGO.SetActive(true);
 		tooltipText.text = text;
-		if(!string.IsNullOrEmpty(cost))
+		if (!string.IsNullOrEmpty(cost))
 		{
 			ShowCost(cost);
 		}
@@ -82,7 +161,7 @@ public class HubManager : MonoBehaviour
 	{
 		tooltipCostGO.SetActive(true);
 		tooltipCostText.text = cost;
-		tooltipCostText.color = saveData.gold > int.Parse(cost) ? Colors.white : Colors.blood;
+		tooltipCostText.color = saveData.gold > int.Parse(cost) ? Color.black : Colors.blood;
 	}
 
 	public void HideTooltip()

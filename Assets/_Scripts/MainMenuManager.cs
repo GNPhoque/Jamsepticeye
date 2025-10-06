@@ -6,4 +6,9 @@ public class MainMenuManager : MonoBehaviour
 	{
 		SceneLoader.instance.StartNewGame();
 	}
+
+	public void BackToTitleScreen()
+	{
+		SceneLoader.instance.LoadScene(Scenes.MainMenu);
+	}
 }

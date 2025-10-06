@@ -13,22 +13,13 @@ MonoBehaviour:
   m_Name: MachineUpgrade 1
   m_EditorClassIdentifier: 
   name: Impaling
-  description: 'Impaling upgrade
-
-    stats :
-
-    Chance : 50%
-
-    Gold gain :
-    25
-
-    Glory gain : 3'
+  description: <color=#7E0800>Impaling upgrade 2</color>
   machine: 4
+  upgradeType: 5
   onSprite: {fileID: 0}
   offSprite: {fileID: 0}
   isActive: 0
   cost: 45
-  durability: 0
-  goldReward: 0
+  goldReward: 20
   gloryReward: 0
   hypeReward: 0

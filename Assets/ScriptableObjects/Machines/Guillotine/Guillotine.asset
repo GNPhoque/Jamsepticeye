@@ -13,26 +13,27 @@ MonoBehaviour:
   m_Name: Guillotine
   m_EditorClassIdentifier: 
   name: Guillotine
-  description: 'Guillotine machine
-
-    stats :
-
-    Chance : 50%
-
-    Gold gain
-    : 25
-
-    Glory gain : 3'
+  description: <color=#7E0800>Guillotine machine</color>
   machine: 2
-  onSprite: {fileID: -6342330696276671901, guid: 2f81b0a444d8ea341b8e561b99085175, type: 3}
-  offSprite: {fileID: -5554901041445681194, guid: 78d25a99752956c429685f8f042436c9, type: 3}
-  executionIntro: {fileID: 21300000, guid: be67155a1ca21ab44804f10e9af56a81, type: 3}
-  executionGood: {fileID: 21300000, guid: 43e525100f3b06540a99bf6a176c5e3d, type: 3}
-  executionBad: {fileID: 21300000, guid: 813027378f58fa24f8dad7b925e52f69, type: 3}
-  baseSuccessChance: 0
-  baseGoldReward: 0
-  baseGloryReward: 0
+  roll:
+    perfect: 1
+    ok: 1
+    cross: 1
+  baseRoll:
+    perfect: 1
+    ok: 1
+    cross: 1
+  onSprite: {fileID: 21300000, guid: 2f81b0a444d8ea341b8e561b99085175, type: 3}
+  offSprite: {fileID: 21300000, guid: 78d25a99752956c429685f8f042436c9, type: 3}
+  executionIntro: {fileID: 21300000, guid: 11d11c6778c554544a164943596dd659, type: 3}
+  executionGood: {fileID: 21300000, guid: d9a42843c46e52c4b8300f9181b85b30, type: 3}
+  executionBad: {fileID: 21300000, guid: beaa82a69533d1e4dbedb851b32ab705, type: 3}
+  baseGoldReward: 40
+  baseGloryReward: 4
   baseHypeReward: 0
+  goldReward: 40
+  gloryReward: 4
+  hypeReward: 0
   upgrades:
   - {fileID: 11400000, guid: c2a4c20f2583bd04681a5a23f5235c9e, type: 2}
   - {fileID: 11400000, guid: 93195fa33bab41e44b3f9500aa126679, type: 2}

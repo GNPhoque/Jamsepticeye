@@ -9,6 +9,9 @@ public class MachineSO : ScriptableObject
 	public string description;
 	public EMachines machine;
 
+	public RouletteList roll;
+	public RouletteList baseRoll;
+
 	public Sprite onSprite;
 	public Sprite offSprite;
 
@@ -16,10 +19,13 @@ public class MachineSO : ScriptableObject
 	public Sprite executionGood;
 	public Sprite executionBad;
 
-	public int baseSuccessChance;
-	public int baseGoldReward;
-	public int baseGloryReward;
-	public int baseHypeReward;
+	public float baseGoldReward;
+	public float baseGloryReward;
+	public float baseHypeReward;
+
+	public float goldReward;
+	public float gloryReward;
+	public float hypeReward;
 
 	public List<MachineUpgradeSO> upgrades;
 }

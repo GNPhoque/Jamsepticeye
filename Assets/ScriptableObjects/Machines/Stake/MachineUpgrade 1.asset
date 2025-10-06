@@ -13,22 +13,13 @@ MonoBehaviour:
   m_Name: MachineUpgrade 1
   m_EditorClassIdentifier: 
   name: Stake
-  description: 'Stake Upgrade
-
-    stats :
-
-    Chance : 50%
-
-    Gold gain : 25
-
-    Glory
-    gain : 3'
+  description: <color=#7E0800>Stake Upgrade 2</color>
   machine: 5
+  upgradeType: 3
   onSprite: {fileID: 0}
   offSprite: {fileID: 0}
-  isActive: 0
-  cost: 50
-  durability: 0
+  isActive: 1
+  cost: 72
   goldReward: 0
   gloryReward: 0
-  hypeReward: 0
+  hypeReward: 0.2

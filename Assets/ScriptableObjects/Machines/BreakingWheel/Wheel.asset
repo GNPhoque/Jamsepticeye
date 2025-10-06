@@ -13,26 +13,27 @@ MonoBehaviour:
   m_Name: Wheel
   m_EditorClassIdentifier: 
   name: Wheel
-  description: 'Wheel machine
-
-    stats :
-
-    Chance : 50%
-
-    Gold gain : 25
-
-    Glory
-    gain : 3'
+  description: <color=#7E0800>Wheel machine</color>
   machine: 6
-  onSprite: {fileID: 103395290254947487, guid: 5e3d4133f3a541c4cb67d1b0496eefc4, type: 3}
-  offSprite: {fileID: -1100253018743331287, guid: 330bc1dc8271c474dae67270145cd7af, type: 3}
-  executionIntro: {fileID: 21300000, guid: be67155a1ca21ab44804f10e9af56a81, type: 3}
-  executionGood: {fileID: 21300000, guid: 43e525100f3b06540a99bf6a176c5e3d, type: 3}
-  executionBad: {fileID: 21300000, guid: 813027378f58fa24f8dad7b925e52f69, type: 3}
-  baseSuccessChance: 0
-  baseGoldReward: 0
-  baseGloryReward: 0
-  baseHypeReward: 0
+  roll:
+    perfect: 1
+    ok: 1
+    cross: 1
+  baseRoll:
+    perfect: 1
+    ok: 1
+    cross: 1
+  onSprite: {fileID: 21300000, guid: 5e3d4133f3a541c4cb67d1b0496eefc4, type: 3}
+  offSprite: {fileID: 21300000, guid: 330bc1dc8271c474dae67270145cd7af, type: 3}
+  executionIntro: {fileID: 21300000, guid: ccbe920ee5f51a648949b2e538715637, type: 3}
+  executionGood: {fileID: 21300000, guid: 8e3b2308987572e419ee2dad39c35009, type: 3}
+  executionBad: {fileID: 21300000, guid: 6d5ff2a338ce8a34a977d643abef606e, type: 3}
+  baseGoldReward: 30
+  baseGloryReward: 5
+  baseHypeReward: 0.1
+  goldReward: 0
+  gloryReward: 0
+  hypeReward: 0
   upgrades:
   - {fileID: 11400000, guid: 6897c40bc2b46254d9ee0cd45a01a047, type: 2}
   - {fileID: 11400000, guid: c23eb7a13dfbf5e45bae40cfff7f0215, type: 2}

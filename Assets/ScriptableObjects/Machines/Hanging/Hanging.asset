@@ -13,26 +13,27 @@ MonoBehaviour:
   m_Name: Hanging
   m_EditorClassIdentifier: 
   name: Hanging
-  description: 'Hanging machine
-
-    stats :
-
-    Chance : 50%
-
-    Gold gain : 25
-
-    Glory
-    gain : 3'
+  description: <color=#7E0800>Hanging machine</color>
   machine: 1
-  onSprite: {fileID: -3200351031799575112, guid: e4d503390766be14e9d97f32d4b15b9e, type: 3}
-  offSprite: {fileID: 6427731017339667152, guid: 4f32d5822f2a12940a5a676ee8bb0e96, type: 3}
+  roll:
+    perfect: 1
+    ok: 1
+    cross: 1
+  baseRoll:
+    perfect: 1
+    ok: 1
+    cross: 1
+  onSprite: {fileID: 21300000, guid: e4d503390766be14e9d97f32d4b15b9e, type: 3}
+  offSprite: {fileID: 21300000, guid: 4f32d5822f2a12940a5a676ee8bb0e96, type: 3}
   executionIntro: {fileID: 21300000, guid: be67155a1ca21ab44804f10e9af56a81, type: 3}
   executionGood: {fileID: 21300000, guid: 43e525100f3b06540a99bf6a176c5e3d, type: 3}
   executionBad: {fileID: 21300000, guid: 813027378f58fa24f8dad7b925e52f69, type: 3}
-  baseSuccessChance: 0
-  baseGoldReward: 0
-  baseGloryReward: 0
-  baseHypeReward: 0
+  baseGoldReward: 30
+  baseGloryReward: 4
+  baseHypeReward: 0.1
+  goldReward: 0
+  gloryReward: 0
+  hypeReward: 0
   upgrades:
   - {fileID: 11400000, guid: 301c10770d9f2a14a8c1c502f175c002, type: 2}
   - {fileID: 11400000, guid: 7ad02ea0df5f3e449ae7b46e459cb7f5, type: 2}

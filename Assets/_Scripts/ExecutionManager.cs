@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -31,7 +32,21 @@ public class ExecutionManager : MonoBehaviour
 	[SerializeField]
 	private GameObject hubButton;
 
+	[SerializeField]
+	private Sprite axeIntro;
+	[SerializeField]
+	private Sprite axeActive;
+	[SerializeField]
+	private Sprite axeWin;
+	[SerializeField]
+	private Sprite axeLoose;
+
+	[SerializeField]
+	GameObject arrow;
+
 	public MachineSO machine;
+	private bool isAxe;
+	private Coroutine blinkCoroutine;
 
 	public static ExecutionManager instance;
 
@@ -42,33 +57,123 @@ public class ExecutionManager : MonoBehaviour
 
 	private void Start()
 	{
+		if(saveData.selectedMachine == EMachines.Beheading)
+		{
+			isAxe = true;
+			execution.gameObject.SetActive(false);
+		}
+
 		machine = machines.First(x => x.machine == saveData.selectedMachine);
-		execution.sprite = machine.executionIntro;
+		if (isAxe)
+		{
+			executionner.sprite = axeIntro;
+		}
+		else
+		{
+			execution.sprite = machine.executionIntro;
+		}
+
+		blinkCoroutine = StartCoroutine(BlinkArrow());
+	}
+
+	public IEnumerator BlinkArrow()
+	{
+		while (true)
+		{
+			yield return new WaitForSeconds(.3f);
+			arrow.SetActive(false);
+			yield return new WaitForSeconds(.3f);
+			arrow.SetActive(true);
+		}
+	}
+
+	public void HideArrow()
+	{
+		StopCoroutine(blinkCoroutine);
+		arrow.SetActive(false);
 	}
 
 	public void ShowExecutionnerActive()
 	{
-		executionner.sprite = executionnerActive;
+		if (isAxe)
+		{
+			executionner.sprite = axeActive;
+		}
+		else
+		{
+			executionner.sprite = executionnerActive;
+		}
 	}
 
 	public void ShowReward()
 	{
-		if(roulette.outcome == ERouletteOutcome.Fatal || roulette.outcome == ERouletteOutcome.Loose)
+		bool victory = roulette.outcome == ERouletteOutcome.Win|| roulette.outcome == ERouletteOutcome.Perfect;
+
+		if (!victory)
 		{
-			execution.sprite = machine.executionBad;
-			executionner.sprite = executionnerLoose;
+			AudioManager.instance.PlayBoo();
+
+			if (isAxe)
+			{
+				executionner.sprite = axeLoose;
+			}
+			else
+			{
+				execution.sprite = machine.executionBad;
+				executionner.sprite = executionnerLoose;
+			}
 		}
 		else
 		{
-			execution.sprite = machine.executionGood;
-			executionner.sprite = executionnerWin;
+			AudioManager.instance.PlayApplause();
+
+			if (isAxe)
+			{
+				executionner.sprite = axeWin;
+			}
+			else
+			{
+				execution.sprite = machine.executionGood;
+				executionner.sprite = executionnerWin;
+			}
 		}
 
 		rewardGO.SetActive(true);
-		rewardText.text = $@"Success : {roulette.outcome}
-Score : {roulette.result}
-Glory : {saveData.gloryGained}
-Hype : {saveData.hype}";
+
+		switch (roulette.outcome)
+		{
+			case ERouletteOutcome.Fatal:
+				rewardText.text = $@"Critical failure
+
+Gold : 0
+Glory : {((int) -machine.gloryReward * (1 + saveData.hype) * 100 ) / 100}
+Hype : {((int) -machine.hypeReward * (1 + saveData.hype) * 100 ) / 100}";
+				break;
+			case ERouletteOutcome.Loose:
+				rewardText.text = $@"Failure
+
+Gold : 0
+Glory : 0
+Hype : 0";
+				break;
+			case ERouletteOutcome.Win:
+				rewardText.text = $@"Success
+
+Gold : {machine.goldReward}
+Glory : {((int)machine.gloryReward * (1 + saveData.hype) * 100 ) / 100}
+Hype : {((int)machine.hypeReward * 100) / 100}";
+				break;
+			case ERouletteOutcome.Perfect:
+				rewardText.text = $@"Critical success
+
+Gold : {machine.goldReward * 1.5}
+Glory : {((int)machine.gloryReward * 1.5 * (1 + saveData.hype) * 100 ) / 100}
+Hype : {((int)machine.hypeReward * 1.5 * 100 ) / 100}";
+				break;
+			default:
+				break;
+		}
+
 		hubButton.SetActive(true);
 	}
 

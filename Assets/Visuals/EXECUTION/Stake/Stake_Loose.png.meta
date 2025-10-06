@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 1fab8be38ab3d4847860b04db5dd484d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1632095326831262120
+    second: Stake_Loose_0
+  - first:
+      213: -8710219736323806997
+    second: Stake_Loose_1
+  - first:
+      213: 7596665781642661835
+    second: Stake_Loose_2
+  - first:
+      213: -6055781819159466048
+    second: Stake_Loose_3
+  - first:
+      213: -2288012067204840049
+    second: Stake_Loose_4
+  - first:
+      213: -3071641762995604663
+    second: Stake_Loose_5
+  - first:
+      213: -6252789659178679238
+    second: Stake_Loose_6
+  - first:
+      213: -6650055934081513918
+    second: Stake_Loose_7
+  - first:
+      213: 7487418434586944283
+    second: Stake_Loose_8
+  - first:
+      213: 5673336024875473996
+    second: Stake_Loose_9
+  - first:
+      213: -863425236028899274
+    second: Stake_Loose_10
+  - first:
+      213: 5058624567399237306
+    second: Stake_Loose_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stake_Loose_0
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 102
+        width: 1067
+        height: 1374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856c5ac82f1a959e0800000000000000
+      internalID: -1632095326831262120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Loose_1
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 728
+        width: 88
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8a2dc6c451f1780800000000000000
+      internalID: -8710219736323806997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Loose_2
+      rect:
+        serializedVersion: 2
+        x: 2297
+        y: 0
+        width: 586
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf0d209747cc6960800000000000000
+      internalID: 7596665781642661835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Loose_3
+      rect:
+        serializedVersion: 2
+        x: 2431
+        y: 539
+        width: 115
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf2bb7358a85fba0800000000000000
+      internalID: -6055781819159466048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Loose_4
+      rect:
+        serializedVersion: 2
+        x: 2523
+        y: 558
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85c274b5295f30e0800000000000000
+      internalID: -2288012067204840049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Loose_5
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 577
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 943746f37165f55d0800000000000000
+      internalID: -3071641762995604663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Loose_6
+      rect:
+        serializedVersion: 2
+        x: 2843
+        y: 358
+        width: 187
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a344b650fe0a939a0800000000000000
+      internalID: -6252789659178679238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Loose_7
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 208
+        width: 114
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 246c7988c5146b3a0800000000000000
+      internalID: -6650055934081513918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Loose_8
+      rect:
+        serializedVersion: 2
+        x: 2861
+        y: 170
+        width: 76
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b13244e6567a8e760800000000000000
+      internalID: 7487418434586944283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Loose_9
+      rect:
+        serializedVersion: 2
+        x: 2902
+        y: 175
+        width: 63
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4c11265e0dbbbe40800000000000000
+      internalID: 5673336024875473996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Loose_10
+      rect:
+        serializedVersion: 2
+        x: 2910
+        y: 153
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630c36c825f7404f0800000000000000
+      internalID: -863425236028899274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Loose_11
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 17
+        width: 615
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab645e70e38d33640800000000000000
+      internalID: 5058624567399237306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Stake_Loose_0: -1632095326831262120
+      Stake_Loose_1: -8710219736323806997
+      Stake_Loose_10: -863425236028899274
+      Stake_Loose_11: 5058624567399237306
+      Stake_Loose_2: 7596665781642661835
+      Stake_Loose_3: -6055781819159466048
+      Stake_Loose_4: -2288012067204840049
+      Stake_Loose_5: -3071641762995604663
+      Stake_Loose_6: -6252789659178679238
+      Stake_Loose_7: -6650055934081513918
+      Stake_Loose_8: 7487418434586944283
+      Stake_Loose_9: 5673336024875473996
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

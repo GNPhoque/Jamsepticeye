@@ -13,22 +13,13 @@ MonoBehaviour:
   m_Name: MachineUpgrade 2
   m_EditorClassIdentifier: 
   name: Quartering
-  description: 'Quartering Upgrade
-
-    stats :
-
-    Chance : 50%
-
-    Gold gain
-    : 25
-
-    Glory gain : 3'
+  description: <color=#7E0800>Quartering Upgrade 3</color>
   machine: 7
+  upgradeType: 3
   onSprite: {fileID: 0}
   offSprite: {fileID: 0}
   isActive: 0
-  cost: 77
-  durability: 0
+  cost: 40
   goldReward: 0
   gloryReward: 0
-  hypeReward: 0
+  hypeReward: 0.1

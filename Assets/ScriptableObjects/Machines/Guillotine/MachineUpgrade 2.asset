@@ -13,22 +13,13 @@ MonoBehaviour:
   m_Name: MachineUpgrade 2
   m_EditorClassIdentifier: 
   name: Guillotine
-  description: 'Guillotine Upgrade
-
-    stats :
-
-    Chance : 50%
-
-    Gold gain
-    : 25
-
-    Glory gain : 3'
+  description: <color=#7E0800>Guillotine Upgrade 3</color>
   machine: 2
+  upgradeType: 5
   onSprite: {fileID: 0}
   offSprite: {fileID: 0}
   isActive: 0
-  cost: 12
-  durability: 0
-  goldReward: 0
+  cost: 60
+  goldReward: 20
   gloryReward: 0
   hypeReward: 0

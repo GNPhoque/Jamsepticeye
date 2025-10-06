@@ -7,15 +7,15 @@ public class MachineUpgradeSO : ScriptableObject
 	[TextArea]
 	public string description;
 	public EMachines machine;
+	public EUpgrades upgradeType;
 
 	public Sprite onSprite;
 	public Sprite offSprite;
 
 	public bool isActive;
-	public int cost;
-	public int durability;
+	public float cost;
 
-	public int goldReward;
-	public int gloryReward;
-	public int hypeReward;
+	public float goldReward;
+	public float gloryReward;
+	public float hypeReward;
 }

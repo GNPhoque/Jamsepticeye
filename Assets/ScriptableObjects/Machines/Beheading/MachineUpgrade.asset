@@ -13,20 +13,13 @@ MonoBehaviour:
   m_Name: MachineUpgrade
   m_EditorClassIdentifier: 
   name: Beheading
-  description: 'Beheading upgrade 1
-
-    stats :
-
-    Chance : +10%
-
-    Gold gain
-    : +5'
+  description: <color=#7E0800>Beheading upgrade 1</color>
   machine: 3
+  upgradeType: 1
   onSprite: {fileID: -1121655610266385169, guid: 4b12a57bc1ce56c49a6c7424f0f4f882, type: 3}
   offSprite: {fileID: 5734550760827045744, guid: 6c97d339073bcfd4a90e11871cbcabae, type: 3}
   isActive: 0
   cost: 25
-  durability: 0
   goldReward: 0
   gloryReward: 0
   hypeReward: 0

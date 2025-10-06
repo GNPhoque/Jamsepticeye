@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: f4be48f800f534f468a7aeaaf5462987
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6043906075685023014
+    second: Stake_Win_0
+  - first:
+      213: -1858841630478652143
+    second: Stake_Win_1
+  - first:
+      213: 6554614925814626641
+    second: Stake_Win_2
+  - first:
+      213: 1797662213281625947
+    second: Stake_Win_3
+  - first:
+      213: 4946195133133567311
+    second: Stake_Win_4
+  - first:
+      213: 3054275585584867390
+    second: Stake_Win_5
+  - first:
+      213: -8683958413566510619
+    second: Stake_Win_6
+  - first:
+      213: -102211429088562971
+    second: Stake_Win_7
+  - first:
+      213: 8878971390869468435
+    second: Stake_Win_8
+  - first:
+      213: -602899491946886203
+    second: Stake_Win_9
+  - first:
+      213: -2957959139576715509
+    second: Stake_Win_10
+  - first:
+      213: 4897163852764261254
+    second: Stake_Win_11
+  - first:
+      213: 690675275588024205
+    second: Stake_Win_12
+  - first:
+      213: 4904901054042559762
+    second: Stake_Win_13
+  - first:
+      213: 1544976186478837154
+    second: Stake_Win_14
+  - first:
+      213: 4038437704740515267
+    second: Stake_Win_15
+  - first:
+      213: -7633753847727723770
+    second: Stake_Win_16
+  - first:
+      213: -2659534176368331013
+    second: Stake_Win_17
+  - first:
+      213: -2994442941619885300
+    second: Stake_Win_18
+  - first:
+      213: 7623504544335245939
+    second: Stake_Win_19
+  - first:
+      213: -8677580550290080431
+    second: Stake_Win_20
+  - first:
+      213: 4783388969933059442
+    second: Stake_Win_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stake_Win_0
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 0
+        width: 1208
+        height: 1958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62de709cd8440e350800000000000000
+      internalID: 6043906075685023014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_1
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 424
+        width: 280
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11dac99b2611436e0800000000000000
+      internalID: -1858841630478652143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_2
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 557
+        width: 83
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15977a41c8ba6fa50800000000000000
+      internalID: 6554614925814626641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_3
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 438
+        width: 164
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b573bc0324492f810800000000000000
+      internalID: 1797662213281625947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_4
+      rect:
+        serializedVersion: 2
+        x: 2555
+        y: 511
+        width: 126
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45313c744a64a440800000000000000
+      internalID: 4946195133133567311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_5
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 600
+        width: 42
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e382fec7677f26a20800000000000000
+      internalID: 3054275585584867390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_6
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 627
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e97a1b15d16c7780800000000000000
+      internalID: -8683958413566510619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_7
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 502
+        width: 30
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e0f03d2f3fd49ef0800000000000000
+      internalID: -102211429088562971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_8
+      rect:
+        serializedVersion: 2
+        x: 2266
+        y: 0
+        width: 511
+        height: 524
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31571abef61783b70800000000000000
+      internalID: 8878971390869468435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_9
+      rect:
+        serializedVersion: 2
+        x: 2669
+        y: 458
+        width: 66
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb0e3b3b1212a7f0800000000000000
+      internalID: -602899491946886203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_10
+      rect:
+        serializedVersion: 2
+        x: 2695
+        y: 498
+        width: 54
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b07e861a5d733f6d0800000000000000
+      internalID: -2957959139576715509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_11
+      rect:
+        serializedVersion: 2
+        x: 2752
+        y: 496
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ba5eae39836f340800000000000000
+      internalID: 4897163852764261254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_12
+      rect:
+        serializedVersion: 2
+        x: 1963
+        y: 255
+        width: 286
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87b198f085c59900800000000000000
+      internalID: 690675275588024205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_13
+      rect:
+        serializedVersion: 2
+        x: 2186
+        y: 299
+        width: 69
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21555a87585b11440800000000000000
+      internalID: 4904901054042559762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_14
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 234
+        width: 79
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad328de7abd07510800000000000000
+      internalID: 1544976186478837154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_15
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 258
+        width: 69
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd2a9622b96b0830800000000000000
+      internalID: 4038437704740515267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_16
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 248
+        width: 63
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60bea6322557f0690800000000000000
+      internalID: -7633753847727723770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_17
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 103
+        width: 85
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf6fd85e1cf671bd0800000000000000
+      internalID: -2659534176368331013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_18
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 161
+        width: 63
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b2294820a9176d0800000000000000
+      internalID: -2994442941619885300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_19
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 88
+        width: 58
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 372bda4fdf02cc960800000000000000
+      internalID: 7623504544335245939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_20
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 12
+        width: 77
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15dfe1e177a039780800000000000000
+      internalID: -8677580550290080431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stake_Win_21
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 0
+        width: 63
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 275b167bce2026240800000000000000
+      internalID: 4783388969933059442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Stake_Win_0: 6043906075685023014
+      Stake_Win_1: -1858841630478652143
+      Stake_Win_10: -2957959139576715509
+      Stake_Win_11: 4897163852764261254
+      Stake_Win_12: 690675275588024205
+      Stake_Win_13: 4904901054042559762
+      Stake_Win_14: 1544976186478837154
+      Stake_Win_15: 4038437704740515267
+      Stake_Win_16: -7633753847727723770
+      Stake_Win_17: -2659534176368331013
+      Stake_Win_18: -2994442941619885300
+      Stake_Win_19: 7623504544335245939
+      Stake_Win_2: 6554614925814626641
+      Stake_Win_20: -8677580550290080431
+      Stake_Win_21: 4783388969933059442
+      Stake_Win_3: 1797662213281625947
+      Stake_Win_4: 4946195133133567311
+      Stake_Win_5: 3054275585584867390
+      Stake_Win_6: -8683958413566510619
+      Stake_Win_7: -102211429088562971
+      Stake_Win_8: 8878971390869468435
+      Stake_Win_9: -602899491946886203
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,11 @@ public class Roulette : MonoBehaviour
 {
 	[SerializeField]
 	private List<Image> slots;
+	[SerializeField]
+	private Image handle;
+
+	[SerializeField]
+	Sprite handleOnSprite;
 
 	[SerializeField]
 	Sprite perfectSprite;
@@ -46,18 +52,22 @@ public class Roulette : MonoBehaviour
 			return;
 		}
 
+		AudioManager.instance.PlayClic();
+		handle.sprite = handleOnSprite;
 		ExecutionManager.instance.ShowExecutionnerActive();
 
 		started = true;
-		ExecutionManager.instance.saveData.hype = 0;
 		ExecutionManager.instance.saveData.gloryGained = 0;
 		StartCoroutine(ProcessRoulette());
+
+		ExecutionManager.instance.HideArrow();
 	}
 
 	private IEnumerator ProcessRoulette()
 	{
 		float currentDuration = 0f;
-		int[] results = new int[3];
+		result = 0;
+		RouletteList roll = ExecutionManager.instance.machine.roll;
 
 		while (currentDuration < rouletteDuration)
 		{
@@ -70,24 +80,32 @@ public class Roulette : MonoBehaviour
 			currentDuration += timeBetweenRolls;
 			yield return wfs;
 			//SHOW
+			result = 0;
 			for (int i = 0; i < slots.Count; i++)
 			{
 				Image slot = slots[i];
 				slot.gameObject.SetActive(true);
-				results[i] = Random.Range(0, 3);
-				switch (results[i])
+				float rng = Random.value;
+
+				int total = 0;
+				total += roll.perfect;
+				total += roll.ok;
+				total += roll.cross;
+				rng *= total;
+
+				if (rng < roll.perfect)
 				{
-					case 0:
-						slot.sprite = failSprite;
-						break;
-					case 1:
-						slot.sprite = successSprite;
-						break;
-					case 2:
-						slot.sprite = perfectSprite;
-						break;
-					default:
-						break;
+					slot.sprite = perfectSprite;
+					result += 2;
+				}
+				else if (rng < roll.perfect + roll.ok)
+				{
+					slot.sprite = successSprite;
+					result += 1;
+				}
+				else
+				{
+					slot.sprite = failSprite;
 				}
 			}
 			//WAIT
@@ -98,37 +116,37 @@ public class Roulette : MonoBehaviour
 			yield return wfs;
 		}
 
-		result = 0;
-		for (int i = 0; i < results.Length; i++)
-		{
-			result += results[i];
-		}
-
 		if(result < loseScore)
 		{
 			//BIG LOOSE
 			outcome = ERouletteOutcome.Fatal;
-			ExecutionManager.instance.saveData.hype -= ExecutionManager.instance.machine.baseHypeReward;
-			ExecutionManager.instance.saveData.gloryGained -= ExecutionManager.instance.machine.baseGloryReward;
+			ExecutionManager.instance.saveData.lastExecFail = true;
+			ExecutionManager.instance.saveData.hype -= ExecutionManager.instance.machine.hypeReward;
+			ExecutionManager.instance.saveData.gloryGained -= ExecutionManager.instance.machine.gloryReward;
 		}
 		else if (result < winScore)
 		{
 			//LOOSE
 			outcome = ERouletteOutcome.Loose;
-			ExecutionManager.instance.saveData.gloryGained -= ExecutionManager.instance.machine.baseGloryReward;
+			ExecutionManager.instance.saveData.lastExecFail = true;
 		}
 		else if (result < perfectScore)
 		{
 			//WIN
 			outcome = ERouletteOutcome.Win;
-			ExecutionManager.instance.saveData.gloryGained += ExecutionManager.instance.machine.baseGloryReward;
+			ExecutionManager.instance.saveData.lastExecFail = false;
+			ExecutionManager.instance.saveData.gold += ExecutionManager.instance.machine.goldReward;
+			ExecutionManager.instance.saveData.hype += ExecutionManager.instance.machine.hypeReward;
+			ExecutionManager.instance.saveData.gloryGained = ExecutionManager.instance.machine.gloryReward * (1 + ExecutionManager.instance.saveData.hype);
 		}
 		else
 		{
 			//BIG WIN
 			outcome = ERouletteOutcome.Perfect;
-			ExecutionManager.instance.saveData.hype += ExecutionManager.instance.machine.baseHypeReward;
-			ExecutionManager.instance.saveData.gloryGained += ExecutionManager.instance.machine.baseGloryReward;
+			ExecutionManager.instance.saveData.lastExecFail = false;
+			ExecutionManager.instance.saveData.gold += ExecutionManager.instance.machine.goldReward * 1.5f;
+			ExecutionManager.instance.saveData.hype += ExecutionManager.instance.machine.hypeReward * 1.5f;
+			ExecutionManager.instance.saveData.gloryGained = ExecutionManager.instance.machine.gloryReward * (1.5f + ExecutionManager.instance.saveData.hype);
 		}
 
 		ExecutionManager.instance.ShowReward();

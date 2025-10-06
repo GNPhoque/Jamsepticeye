@@ -8,7 +8,8 @@ public enum Scenes
 	MainMenu = 0,
 	Hub = 1,
 	Execution = 2,
-	GameOver = 3
+	GameOverLoose = 3,
+	GameOverWin = 4
 }
 
 public class SceneLoader : MonoBehaviour
@@ -32,17 +33,20 @@ public class SceneLoader : MonoBehaviour
 
 	public void StartNewGame()
 	{
+		print("INIT");
 		saveData.Init();
 		LoadScene(Scenes.Hub);
 	}
 	
 	public void LoadScene(int scene)
 	{
+		AudioManager.instance.PlayClic();
 		SceneManager.LoadScene(scene);
 	}
 
 	public void LoadScene(Scenes scene)
 	{
+		AudioManager.instance.PlayClic();
 		SceneManager.LoadScene((int)scene);
 	}
 }

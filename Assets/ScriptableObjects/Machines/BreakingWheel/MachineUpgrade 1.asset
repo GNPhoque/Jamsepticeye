@@ -13,22 +13,13 @@ MonoBehaviour:
   m_Name: MachineUpgrade 1
   m_EditorClassIdentifier: 
   name: Wheel
-  description: 'Wheel upgrade
-
-    stats :
-
-    Chance : 50%
-
-    Gold gain : 25
-
-    Glory
-    gain : 3'
+  description: <color=#7E0800>Wheel upgrade 2</color>
   machine: 6
+  upgradeType: 4
   onSprite: {fileID: 0}
   offSprite: {fileID: 0}
   isActive: 0
   cost: 37
-  durability: 0
   goldReward: 0
   gloryReward: 0
   hypeReward: 0

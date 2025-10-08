@@ -13,24 +13,24 @@ public class ExecutionManager : MonoBehaviour
 	private List<MachineSO> machines;
 
 	[SerializeField]
-	private Image execution;
+	protected Image execution;
 	[SerializeField]
-	private Image executionner;
+	protected Image executionner;
 	[SerializeField]
-	private Sprite executionnerActive;
+	protected Sprite executionnerActive;
 	[SerializeField]
-	private Sprite executionnerWin;
+	protected Sprite executionnerWin;
 	[SerializeField]
-	private Sprite executionnerLoose;
+	protected Sprite executionnerLoose;
 
 	[SerializeField]
-	private Roulette roulette;
+	protected Roulette roulette;
 	[SerializeField]
-	private GameObject rewardGO;
+	protected GameObject rewardGO;
 	[SerializeField]
-	private TextMeshProUGUI rewardText;
+	protected TextMeshProUGUI rewardText;
 	[SerializeField]
-	private GameObject hubButton;
+	protected GameObject hubButton;
 
 	[SerializeField]
 	private Sprite axeIntro;
@@ -42,11 +42,11 @@ public class ExecutionManager : MonoBehaviour
 	private Sprite axeLoose;
 
 	[SerializeField]
-	GameObject arrow;
+	protected GameObject arrow;
 
 	public MachineSO machine;
 	private bool isAxe;
-	private Coroutine blinkCoroutine;
+	protected Coroutine blinkCoroutine;
 
 	public static ExecutionManager instance;
 
@@ -93,7 +93,7 @@ public class ExecutionManager : MonoBehaviour
 		arrow.SetActive(false);
 	}
 
-	public void ShowExecutionnerActive()
+	public virtual void ShowExecutionnerActive()
 	{
 		if (isAxe)
 		{
@@ -105,7 +105,7 @@ public class ExecutionManager : MonoBehaviour
 		}
 	}
 
-	public void ShowReward()
+	public virtual void ShowReward()
 	{
 		bool victory = roulette.outcome == ERouletteOutcome.Win|| roulette.outcome == ERouletteOutcome.Perfect;
 
@@ -146,8 +146,8 @@ public class ExecutionManager : MonoBehaviour
 				rewardText.text = $@"Critical failure
 
 Gold : 0
-Glory : {((int) -machine.gloryReward * (1 + saveData.hype) * 100 ) / 100}
-Hype : {((int) -machine.hypeReward * (1 + saveData.hype) * 100 ) / 100}";
+Glory : {Mathf.RoundToInt(-machine.gloryReward  * (1 + saveData.hype) * 100 ) / 100}
+Hype : {Mathf.RoundToInt(-machine.hypeReward * (1 + saveData.hype) * 100 ) / 100}";
 				break;
 			case ERouletteOutcome.Loose:
 				rewardText.text = $@"Failure
@@ -160,15 +160,15 @@ Hype : 0";
 				rewardText.text = $@"Success
 
 Gold : {machine.goldReward}
-Glory : {((int)machine.gloryReward * (1 + saveData.hype) * 100 ) / 100}
-Hype : {((int)machine.hypeReward * 100) / 100}";
+Glory : {Mathf.RoundToInt(machine.gloryReward * (1 + saveData.hype) * 100 ) / 100}
+Hype : {Mathf.RoundToInt(machine.hypeReward * (1 + saveData.hype) * 100 ) / 100}";
 				break;
 			case ERouletteOutcome.Perfect:
 				rewardText.text = $@"Critical success
 
 Gold : {machine.goldReward * 1.5}
-Glory : {((int)machine.gloryReward * 1.5 * (1 + saveData.hype) * 100 ) / 100}
-Hype : {((int)machine.hypeReward * 1.5 * 100 ) / 100}";
+Glory : {Mathf.RoundToInt(machine.gloryReward * 1.5f * (1 + saveData.hype) * 100 ) / 100}
+Hype : {Mathf.RoundToInt(machine.hypeReward * 1.5f * (1 + saveData.hype) * 100 ) / 100}";
 				break;
 			default:
 				break;
@@ -177,7 +177,7 @@ Hype : {((int)machine.hypeReward * 1.5 * 100 ) / 100}";
 		hubButton.SetActive(true);
 	}
 
-	public void GoBackToHub()
+	public virtual void GoBackToHub()
 	{
 		SceneLoader.instance.LoadScene(Scenes.Hub);
 	}

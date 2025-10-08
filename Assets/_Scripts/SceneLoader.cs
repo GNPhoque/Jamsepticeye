@@ -8,8 +8,9 @@ public enum Scenes
 	MainMenu = 0,
 	Hub = 1,
 	Execution = 2,
-	GameOverLoose = 3,
-	GameOverWin = 4
+	PlayerExecution = 3,
+	GameOverLoose = 4,
+	GameOverWin = 5
 }
 
 public class SceneLoader : MonoBehaviour

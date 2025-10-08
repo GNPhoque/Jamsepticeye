@@ -12,6 +12,8 @@ public class SaveData : ScriptableObject
 	public float hype;
 	public bool lastExecFail;
 	public bool watchLore;
+	public bool wasSavedFromExecution;
+	public bool isComingBackFromExecution;
 	public EMachines selectedMachine;
 	public List<MachineSO> machines;
 	public List<MachineUpgradeSO> upgrades;
@@ -27,6 +29,8 @@ public class SaveData : ScriptableObject
 		hype = 0;
 		lastExecFail = false;
 		watchLore = true;
+		wasSavedFromExecution = false;
+		isComingBackFromExecution = false;
 
 		foreach (var machine in machines)
 		{

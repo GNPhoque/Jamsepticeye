@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd67f8865fc24b148b58ae5c62cb92a1, type: 3}
+  m_Name: PlayerDeath
+  m_EditorClassIdentifier: 
+  name: PlayerDeath
+  description: <color=#7E0800>Guillotine machine</color>
+  machine: 2
+  roll:
+    perfect: 1
+    ok: 1
+    cross: 1
+  baseRoll:
+    perfect: 1
+    ok: 1
+    cross: 1
+  onSprite: {fileID: 21300000, guid: 2f81b0a444d8ea341b8e561b99085175, type: 3}
+  offSprite: {fileID: 21300000, guid: 78d25a99752956c429685f8f042436c9, type: 3}
+  executionIntro: {fileID: 21300000, guid: 11d11c6778c554544a164943596dd659, type: 3}
+  executionGood: {fileID: 21300000, guid: d9a42843c46e52c4b8300f9181b85b30, type: 3}
+  executionBad: {fileID: 21300000, guid: beaa82a69533d1e4dbedb851b32ab705, type: 3}
+  baseGoldReward: 40
+  baseGloryReward: 4
+  baseHypeReward: 0
+  goldReward: 40
+  gloryReward: 4
+  hypeReward: 0
+  upgrades:
+  - {fileID: 11400000, guid: c2a4c20f2583bd04681a5a23f5235c9e, type: 2}
+  - {fileID: 11400000, guid: 93195fa33bab41e44b3f9500aa126679, type: 2}
+  - {fileID: 11400000, guid: 77e38e32d23dd7049a751f1c1cff3158, type: 2}

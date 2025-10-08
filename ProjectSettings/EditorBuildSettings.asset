@@ -15,10 +15,13 @@ EditorBuildSettings:
     path: Assets/Scenes/2.Execution.unity
     guid: 2dee69ea2ff0b6a4980337f54b0bc16b
   - enabled: 1
-    path: Assets/Scenes/3.GameOverLoose.unity
+    path: Assets/Scenes/3.PlayerExecution.unity
+    guid: e2242bbcdaee77d4f8725753d30419cd
+  - enabled: 1
+    path: Assets/Scenes/4.GameOverLoose.unity
     guid: 320f56b4ca9da1e40b5263bea7e10f1a
   - enabled: 1
-    path: Assets/Scenes/4.GameOverWin.unity
+    path: Assets/Scenes/5.GameOverWin.unity
     guid: 90b88607c50d52b4a9747d3c13612570
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

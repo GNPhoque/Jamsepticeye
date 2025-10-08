@@ -28,6 +28,16 @@ public class AudioManager : MonoBehaviour
 		DontDestroyOnLoad(gameObject);
 	}
 
+	public void UpdateMusicVolume(float volume)
+	{
+		music.volume = volume;
+	}
+
+	public void UpdateSfxVolume(float volume)
+	{
+		sfx.volume = volume;
+	}
+
 	public void PlayClic()
 	{
 		sfx.PlayOneShot(GetRandomClip(clicClips));

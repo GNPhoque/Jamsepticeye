@@ -68,8 +68,15 @@ public class HubManager : MonoBehaviour
 	{
 		if (!saveData.watchLore)
 		{
-			HideLore();
+			loreGO.SetActive(false);
 		}
+
+		gloryFill.SetGloryOnHubLoaded();
+		if (CheckGameOver())
+		{
+			return;
+		}
+
 		saveData.watchLore = false;
 
 		dayText.text = $"DAY {++saveData.day}";
@@ -90,32 +97,38 @@ public class HubManager : MonoBehaviour
 
 		//Bottom Left Glory and gold display
 		UpdateGloryTarget();
-		gloryFill.SetGloryOnHubLoaded();
 		gloryFill.UpdateTargetGlory();
 		gloryFill.FillGlory();
 		UpdateGold();
-
-		CheckGameOver();
-		gloryFill.UpdateTargetGlory();
 	}
 
 	public void HideLore()
 	{
+		AudioManager.instance.PlayClic();
+
 		loreGO.SetActive(false);
 	}
 
-	private void CheckGameOver()
+	private bool CheckGameOver()
 	{
-		if(saveData.glory >= 100)
+		if (saveData.isComingBackFromExecution)
+		{
+			return false;
+		}
+
+		if(saveData.glory + saveData.gloryGained >= 100)
 		{
 			//WIN
 			SceneLoader.instance.LoadScene(Scenes.GameOverWin);
+			return true;
 		}
-		else if (saveData.glory < saveData.gloryTarget)
+		else if (saveData.glory + saveData.gloryGained < Mathf.Floor(saveData.gloryTarget))
 		{
 			//LOOSE
-			SceneLoader.instance.LoadScene(Scenes.GameOverLoose);
+			SceneLoader.instance.LoadScene(Scenes.PlayerExecution);
+			return true;
 		}
+		return false;
 	}
 
 	private void UpdateGloryTarget()
@@ -125,14 +138,23 @@ public class HubManager : MonoBehaviour
 			return;
 		}
 
+		if (saveData.isComingBackFromExecution)
+		{
+			saveData.gloryTarget -= targetBase * 0.70f;
+			return;
+		}
+
 		float target = saveData.gloryTarget;
-		target += targetBase * (1 + target / 100);
+		// Progression linéaire plus douce au lieu d'exponentielle
+		target += targetBase * 0.70f; // Réduction de 70%
+
 		if (saveData.lastExecFail)
 		{
-			target += targetFailCompensation;
+			target += targetFailCompensation * 0.5f; // Réduction de la pénalité
 		}
 
 		saveData.gloryTarget = target;
+		gloryFill.ChangeFillColor();
 	}
 
 	public void UpdateGold()

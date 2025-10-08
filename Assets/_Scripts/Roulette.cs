@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class Roulette : MonoBehaviour
 {
 	[SerializeField]
+	private ExecutionManager executionManager;
+	[SerializeField]
 	private List<Image> slots;
 	[SerializeField]
 	private Image handle;
@@ -54,20 +56,20 @@ public class Roulette : MonoBehaviour
 
 		AudioManager.instance.PlayClic();
 		handle.sprite = handleOnSprite;
-		ExecutionManager.instance.ShowExecutionnerActive();
+		executionManager.ShowExecutionnerActive();
 
 		started = true;
-		ExecutionManager.instance.saveData.gloryGained = 0;
+		executionManager.saveData.gloryGained = 0;
 		StartCoroutine(ProcessRoulette());
 
-		ExecutionManager.instance.HideArrow();
+		executionManager.HideArrow();
 	}
 
 	private IEnumerator ProcessRoulette()
 	{
 		float currentDuration = 0f;
 		result = 0;
-		RouletteList roll = ExecutionManager.instance.machine.roll;
+		RouletteList roll = executionManager.machine.roll;
 
 		while (currentDuration < rouletteDuration)
 		{
@@ -116,39 +118,58 @@ public class Roulette : MonoBehaviour
 			yield return wfs;
 		}
 
-		if(result < loseScore)
+		if (executionManager is PlyerExecutionManager && executionManager.saveData.wasSavedFromExecution)
+		{
+			foreach (var slot in slots)
+			{
+				slot.sprite = failSprite;
+			}
+			if (result < winScore)
+			{
+				outcome = ERouletteOutcome.Loose;
+			}
+			else
+			{
+				outcome = ERouletteOutcome.Win;
+			}
+
+			executionManager.ShowReward();
+			yield break;
+		}
+
+		if (result < loseScore)
 		{
 			//BIG LOOSE
 			outcome = ERouletteOutcome.Fatal;
-			ExecutionManager.instance.saveData.lastExecFail = true;
-			ExecutionManager.instance.saveData.hype -= ExecutionManager.instance.machine.hypeReward;
-			ExecutionManager.instance.saveData.gloryGained -= ExecutionManager.instance.machine.gloryReward;
+			executionManager.saveData.lastExecFail = true;
+			executionManager.saveData.hype -= executionManager.machine.hypeReward;
+			executionManager.saveData.gloryGained -= executionManager.machine.gloryReward;
 		}
 		else if (result < winScore)
 		{
 			//LOOSE
 			outcome = ERouletteOutcome.Loose;
-			ExecutionManager.instance.saveData.lastExecFail = true;
+			executionManager.saveData.lastExecFail = true;
 		}
 		else if (result < perfectScore)
 		{
 			//WIN
 			outcome = ERouletteOutcome.Win;
-			ExecutionManager.instance.saveData.lastExecFail = false;
-			ExecutionManager.instance.saveData.gold += ExecutionManager.instance.machine.goldReward;
-			ExecutionManager.instance.saveData.hype += ExecutionManager.instance.machine.hypeReward;
-			ExecutionManager.instance.saveData.gloryGained = ExecutionManager.instance.machine.gloryReward * (1 + ExecutionManager.instance.saveData.hype);
+			executionManager.saveData.lastExecFail = false;
+			executionManager.saveData.gold += executionManager.machine.goldReward;
+			executionManager.saveData.hype += executionManager.machine.hypeReward;
+			executionManager.saveData.gloryGained = executionManager.machine.gloryReward * (1 + executionManager.saveData.hype);
 		}
 		else
 		{
 			//BIG WIN
 			outcome = ERouletteOutcome.Perfect;
-			ExecutionManager.instance.saveData.lastExecFail = false;
-			ExecutionManager.instance.saveData.gold += ExecutionManager.instance.machine.goldReward * 1.5f;
-			ExecutionManager.instance.saveData.hype += ExecutionManager.instance.machine.hypeReward * 1.5f;
-			ExecutionManager.instance.saveData.gloryGained = ExecutionManager.instance.machine.gloryReward * (1.5f + ExecutionManager.instance.saveData.hype);
+			executionManager.saveData.lastExecFail = false;
+			executionManager.saveData.gold += executionManager.machine.goldReward * 1.5f;
+			executionManager.saveData.hype += executionManager.machine.hypeReward * 1.5f;
+			executionManager.saveData.gloryGained = executionManager.machine.gloryReward * (1.5f + executionManager.saveData.hype);
 		}
 
-		ExecutionManager.instance.ShowReward();
+		executionManager.ShowReward();
 	}
 }

@@ -140,6 +140,7 @@ public class HubManager : MonoBehaviour
 
 		if (saveData.isComingBackFromExecution)
 		{
+			saveData.isComingBackFromExecution = false;
 			saveData.gloryTarget -= targetBase * 0.70f;
 			return;
 		}

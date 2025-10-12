@@ -332,7 +332,7 @@ MonoBehaviour:
   perfectSprite: {fileID: 21300000, guid: 29981e510782248409b5c638d1e9f2db, type: 3}
   successSprite: {fileID: 21300000, guid: b02db0a8560b1304ea2d617eed8a78e5, type: 3}
   failSprite: {fileID: 21300000, guid: c03e29b1b700b924b84126ef1a80a9bc, type: 3}
-  rouletteDuration: 5
+  rouletteDuration: 3
   timeBetweenRolls: 0.05
   loseScore: 1
   winScore: 4
